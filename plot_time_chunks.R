@@ -45,6 +45,8 @@ dat <- dat %>%
     start = dplyr::lag(end, default = 0)
   )
 
+dat
+
 #' Then plot...
 #'
 #' using geom_tile need to..

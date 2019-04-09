@@ -69,7 +69,25 @@ dat <- dat %>%
     end = cumsum(duration),
     start = dplyr::lag(end, default = 0)
   )
+
+dat
 ```
+
+    ## # A tibble: 25 x 5
+    ## # Groups:   lecture [4]
+    ##    lecture duration type    end start
+    ##    <chr>      <int> <chr> <int> <dbl>
+    ##  1 lec1           6 B         6     0
+    ##  2 lec1           8 D        14     6
+    ##  3 lec1           4 B        18    14
+    ##  4 lec1           6 D        24    18
+    ##  5 lec1           4 C        28    24
+    ##  6 lec1           5 A        33    28
+    ##  7 lec1           1 C        34    33
+    ##  8 lec1           6 C        40    34
+    ##  9 lec2           5 C         5     0
+    ## 10 lec2           1 B         6     5
+    ## # … with 15 more rows
 
 Then plot...
 
